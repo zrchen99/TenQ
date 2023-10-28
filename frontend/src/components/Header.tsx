@@ -15,16 +15,15 @@ const Header = () => {
             <>
               <NavLink 
                 bg={"#00fffc"} 
-                to="/chat"
+                to="/login"
                 text="Go To Chat"
                 textColor="black"
               />
               <NavLink 
                 bg={"#51538f"} 
-                to="/"
-                text="Logout"
+                to="/signup"
+                text="Sign Up"
                 textColor="white"
-                onClick={auth.logout}
               />
             </>
               ):(
@@ -37,9 +36,10 @@ const Header = () => {
                 />
                 <NavLink 
                   bg={"#51538f"} 
-                  to="/"
-                  text="Logout"
+                  to="/login"
+                  text="Login"
                   textColor="white"
+                  onClick={auth.login}
                 />
               </>
           )}
