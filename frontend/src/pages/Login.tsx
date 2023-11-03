@@ -1,5 +1,6 @@
 import { Box, Typography } from '@mui/material'
 import React from 'react'
+import CustomInput from '../components/shared/CustomInput';
 
 const Login = () => {
   return (
@@ -13,6 +14,8 @@ const Login = () => {
             <Typography variant="h4" textAlign="center" padding={2} fontWeight={600} gutterBottom>
               Login
             </Typography>
+            <CustomInput type="email" name="email" label="Email" />
+            <CustomInput type="password" name="password" label="Password" />
           </Box>
         </form>
       </Box>
