@@ -52,7 +52,7 @@ export const userSignup = async (
         res.cookie(COOKIE_NAME, token, { path: "/", domain: "localhost", expires, httpOnly: true, signed: true });
 
         //return user id
-        return res.status(201).json({ message: "USER SIGNUP", id: user._id.toString() });
+        return res.status(201).json({ message: "USER SIGNUP", name: user.name, email: user.email, id: user._id.toString() });
     } catch (error) {
         console.log(error);
         return res.status(200).json({ message: "ERROR SIGNUP", cause: error.message });
@@ -94,7 +94,7 @@ export const userLogin = async (
 
         res.cookie(COOKIE_NAME, token, { path: "/", domain: "localhost", expires, httpOnly: true, signed: true });
         //return user id
-        return res.status(200).json({ message: "USER LOGIN", id: user._id.toString() });
+        return res.status(200).json({ message: "USER LOGIN", name: user.name, email: user.email, id: user._id.toString() });
     } catch (error) {
         console.log(error);
         return res.status(200).json({ message: "ERROR SIGNUP", cause: error.message });
