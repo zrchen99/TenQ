@@ -8,7 +8,7 @@ import { useAuth } from '../context/AuthContext';
 
 const Login = () => {
   const auth = useAuth();
-  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     const data = new FormData(event.currentTarget);
     const email = data.get('email') as string;
@@ -30,7 +30,7 @@ const Login = () => {
         <img src="airobot.png" alt="Robot" style={{width:"400px"}}/>
       </Box>
       <Box display={'flex'} flex={{ xs: 1, md: 0.5 }} justifyContent={"center"} alignItems={"center"}>
-        <form style={{margin: 'auto', padding: '30px', boxShadow: "10px 10px 20px #000", borderRadius: "10px", border:"none"}}>
+        <form onSubmit={handleSubmit} style={{margin: 'auto', padding: '30px', boxShadow: "10px 10px 20px #000", borderRadius: "10px", border:"none"}}>
           <Box sx={{display: 'flex', flexDirection: 'column', justifyContent: 'center',}}>
             <Typography variant="h4" textAlign="center" padding={2} fontWeight={600}>
               Login

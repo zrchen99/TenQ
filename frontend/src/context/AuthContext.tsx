@@ -1,4 +1,5 @@
 import { ReactNode, createContext, useContext, useEffect, useState } from 'react';
+import { loginUser } from '../helpers/api-communicator';
 //Change this to redux at some point
 type User = {
     name: string;
