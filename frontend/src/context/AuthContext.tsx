@@ -39,7 +39,9 @@ export const AuthProvider = ({ children }: { children: ReactNode } ) => {
             setIsLoggedIn(true);
         }
     };
-    const signup = async ( name: string, email: string, password: string ) => {};
+    const signup = async ( name: string, email: string, password: string ) => {
+        
+    };
     const logout = async () => {};
     const value = {
         isLoggedIn,
