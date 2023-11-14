@@ -1,31 +1,24 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React from 'react';
+import { Link } from 'react-router-dom';
+import './Footer.scss';
 
-const Footer = () => {
+interface FooterProps {
+  authorName: string;
+  portfolioUrl: string;
+}
+
+const Footer: React.FC<FooterProps> = ({ authorName, portfolioUrl }) => {
   return (
-    <footer>
-      <div
-        style={{
-          width: "100%",
-          minHeight: "20vh",
-          maxHeight: "30vh",
-          marginTop: 60,
-        }}
-      >
-        <p style={{ fontSize: "30px", textAlign: "center", padding: "20px" }}>
-          Built With love by
-          <span>
-            <Link
-              style={{ color: "white" }}
-              className="nav-link"
-              to={"https://github.com/zrchen99"}
-            >
-              Ziang Chen (Click to see my Github!)
-            </Link>
-          </span>
-          💘
-        </p>
-      </div>
+    <footer className="footer-container">
+      <p className="footer-text">
+        Built With love by  
+        <span className="footer-author-name">
+          <Link to={portfolioUrl} className="footer-link">
+             {authorName} (Click to see my portfolio!)
+          </Link>
+        </span>
+        💘
+      </p>
     </footer>
   );
 };

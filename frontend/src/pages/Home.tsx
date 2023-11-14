@@ -1,6 +1,6 @@
 import { Box, useMediaQuery, useTheme } from "@mui/material";
 import React from "react";
-import TypingAnim from "../components/typer/TypingAnim";
+import TypingAnim from "../components/typing/TypingAnimation";
 import Footer from "../components/footer/Footer";
 
 const Home = () => {
@@ -59,7 +59,7 @@ const Home = () => {
           />
         </Box>
       </Box>
-      <Footer />
+      <Footer authorName={"Ziang Chen"} portfolioUrl={"https://github.com/zrchen99"}/>
     </Box>
   );
 };

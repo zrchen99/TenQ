@@ -1,0 +1,42 @@
+$assistant-bg: #004d5612;
+$user-bg: #004d56;
+$user-avatar-bg: black;
+$user-avatar-color: white;
+
+.chat-item {
+  display: flex;
+  padding: 16px;
+  gap: 16px;
+  border-radius: 4px;
+  margin-top: 8px;
+  margin-bottom: 8px;
+
+  &.assistant {
+    background-color: $assistant-bg;
+
+    .message-container {
+      .syntax-highlighter {
+        // additional styles for the syntax highlighter can go here
+      }
+    }
+  }
+
+  &.user {
+    background-color: $user-bg;
+
+    .user-avatar {
+      margin-left: 0;
+      background-color: $user-avatar-bg;
+      color: $user-avatar-color;
+    }
+
+    .message-container {
+      .message {
+        font-size: 20px;
+      }
+      .syntax-highlighter {
+        // additional styles for the syntax highlighter can go here
+      }
+    }
+  }
+}

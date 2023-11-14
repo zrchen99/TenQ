@@ -26,8 +26,8 @@ export const sendChatRequest = async (message: string) => {
   if (response.status !== 200) {
     throw new Error("Unable to send chat");
   }
-  const data = await response.data;
-  return data
+  console.log(response.data);
+  return response.data; // Directly return the data from the response
 }
 
 export const getUserChats = async () => {
