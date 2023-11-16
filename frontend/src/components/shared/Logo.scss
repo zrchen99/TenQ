@@ -1,0 +1,26 @@
+.logo-container {
+  display: flex;
+  margin-right: auto;
+  align-items: center;
+  gap: 8px;
+
+  .logo-image {
+    width: 30px;
+    height: 30px;
+  }
+
+  .logo-text {
+    display: none;
+    margin-right: auto;
+    font-weight: 800;
+    text-shadow: 2px 2px 20px #000;
+
+    @media (min-width: 600px) { // sm breakpoint
+      display: block;
+    }
+
+    .logo-text-primary {
+      font-size: 20px;
+    }
+  }
+}
